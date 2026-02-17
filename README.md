@@ -41,14 +41,14 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 각 챕터의 첫 문서부터 바로 학습을 시작하세요!
 
 [![Class Loading](https://img.shields.io/badge/🔹_Class_Loading-ClassLoader_Hierarchy-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./class-loading/01-classloader-hierarchy.md)
-[![Runtime Data Areas](https://img.shields.io/badge/🔹_Runtime_Data-Heap_Structure-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./runtime-data-areas/heap-structure.md)
-[![Bytecode](https://img.shields.io/badge/🔹_Bytecode-Class_File_Format-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./bytecode/class-file-format.md)
-[![Execution Engine](https://img.shields.io/badge/🔹_Execution_Engine-Interpreter_Mechanism-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./execution-engine/interpreter-mechanism.md)
-[![GC](https://img.shields.io/badge/🔹_Garbage_Collection-GC_Roots_%26_Reachability-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./garbage-collection/gc-roots-and-reachability.md)
-[![JMM](https://img.shields.io/badge/🔹_Java_Memory_Model-CPU_Cache_%26_Visibility-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./java-memory-model/cpu-cache-and-visibility-problem.md)
-[![Concurrency](https://img.shields.io/badge/🔹_Concurrency_Internals-Object_Monitor-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./concurrency-internals/object-monitor.md)
-[![Performance](https://img.shields.io/badge/🔹_Performance_Tuning-JVM_Flags_Guide-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./performance-tuning/jvm-flags-complete-guide.md)
-[![Advanced](https://img.shields.io/badge/🔹_Advanced_Internals-Object_Header_%26_Mark_Word-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./advanced-internals/object-header-and-mark-word.md)
+[![Runtime Data Areas](https://img.shields.io/badge/🔹_Runtime_Data-Heap_Structure-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./runtime-data-areas/01-heap-structure.md)
+[![Bytecode](https://img.shields.io/badge/🔹_Bytecode-Class_File_Format-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./bytecode/01-class-file-format.md)
+[![Execution Engine](https://img.shields.io/badge/🔹_Execution_Engine-Interpreter_Mechanism-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./execution-engine/01-interpreter-mechanism.md)
+[![GC](https://img.shields.io/badge/🔹_Garbage_Collection-GC_Roots_%26_Reachability-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./garbage-collection/01-gc-roots-and-reachability.md)
+[![JMM](https://img.shields.io/badge/🔹_Java_Memory_Model-CPU_Cache_%26_Visibility-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./java-memory-model/01-cpu-cache-and-visibility-problem.md)
+[![Concurrency](https://img.shields.io/badge/🔹_Concurrency_Internals-Object_Monitor-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./concurrency-internals/01-object-monitor.md)
+[![Performance](https://img.shields.io/badge/🔹_Performance_Tuning-JVM_Flags_Guide-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./performance-tuning/01-jvm-flags-complete-guide.md)
+[![Advanced](https://img.shields.io/badge/🔹_Advanced_Internals-Object_Header_%26_Mark_Word-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./advanced-internals/01-object-header-and-mark-word.md)
 
 ---
 
@@ -69,13 +69,13 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [ClassLoader Hierarchy](./class-loading/01-classloader-hierarchy) | Bootstrap / Extension / Application 계층과 Parent Delegation Model |
-| [Loading → Linking → Initializing](./class-loading/loading-linking-initializing.md) | 3단계 책임 분리, static 초기화 블록이 실행되는 정확한 시점 |
-| [Bytecode Verification](./class-loading/bytecode-verification.md) | JVM이 .class 파일을 어떻게 신뢰하는가, Verifier 동작 원리 |
-| [Symbolic Reference Resolution](./class-loading/symbolic-reference-resolution.md) | ConstantPool의 심볼릭 참조가 직접 참조로 변환되는 과정 |
-| [Class Unloading](./class-loading/class-unloading.md) | 클래스가 언로딩되는 조건, ClassLoader 누수와 메모리 누수 |
-| [Custom ClassLoader](./class-loading/custom-classloader.md) | `findClass()` vs `loadClass()`, 암호화된 클래스 런타임 복호화 |
-| [ClassLoader Isolation](./class-loading/classloader-isolation.md) | 같은 클래스명이 두 ClassLoader에서 로드되면 `==` 결과는? |
+| [01. ClassLoader Hierarchy](./class-loading/01-classloader-hierarchy.md) | Bootstrap / Extension / Application 계층과 Parent Delegation Model |
+| [02. Loading → Linking → Initializing](./class-loading/02-loading-linking-initializing.md) | 3단계 책임 분리, static 초기화 블록이 실행되는 정확한 시점 |
+| [03. Bytecode Verification](./class-loading/03-bytecode-verification.md) | JVM이 .class 파일을 어떻게 신뢰하는가, Verifier 동작 원리 |
+| [04. Symbolic Reference Resolution](./class-loading/04-symbolic-reference-resolution.md) | ConstantPool의 심볼릭 참조가 직접 참조로 변환되는 과정 |
+| [05. Class Unloading](./class-loading/05-class-unloading.md) | 클래스가 언로딩되는 조건, ClassLoader 누수와 메모리 누수 |
+| [06. Custom ClassLoader](./class-loading/06-custom-classloader.md) | `findClass()` vs `loadClass()`, 암호화된 클래스 런타임 복호화 |
+| [07. ClassLoader Isolation](./class-loading/07-classloader-isolation.md) | 같은 클래스명이 두 ClassLoader에서 로드되면 `==` 결과는? |
 
 </details>
 
@@ -92,13 +92,13 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [Heap Structure](./runtime-data-areas/heap-structure.md) | Eden / Survivor / Old Generation 물리적 구조, 객체 이동 조건 |
-| [TLAB (Thread-Local Allocation Buffer)](./runtime-data-areas/tlab-thread-local-allocation.md) | TLAB가 없으면 생기는 경합, 스레드별 Eden 파티셔닝 원리 |
-| [Stack And Frames](./runtime-data-areas/stack-and-frames.md) | Stack Frame 구조(LVA / Operand Stack / Frame Data), StackOverflowError 시점 |
-| [Method Area & Metaspace](./runtime-data-areas/method-area-metaspace.md) | PermGen이 사라진 이유, Metaspace OOM 시나리오 |
-| [Runtime Constant Pool](./runtime-data-areas/runtime-constant-pool.md) | 클래스 파일 상수풀 vs 런타임 상수풀, 문자열 리터럴의 위치 |
-| [Object Layout In Memory](./runtime-data-areas/object-layout-in-memory.md) | Object Header + Instance Data + Padding, JOL로 실측 |
-| [Off-Heap & Direct Memory](./runtime-data-areas/off-heap-direct-memory.md) | ByteBuffer, `sun.misc.Unsafe`, GC가 닿지 않는 메모리 |
+| [01. Heap Structure](./runtime-data-areas/01-heap-structure.md) | Eden / Survivor / Old Generation 물리적 구조, 객체 이동 조건 |
+| [02. TLAB (Thread-Local Allocation Buffer)](./runtime-data-areas/02-tlab-thread-local-allocation.md) | TLAB가 없으면 생기는 경합, 스레드별 Eden 파티셔닝 원리 |
+| [03. Stack And Frames](./runtime-data-areas/03-stack-and-frames.md) | Stack Frame 구조(LVA / Operand Stack / Frame Data), StackOverflowError 시점 |
+| [04. Method Area & Metaspace](./runtime-data-areas/04-method-area-metaspace.md) | PermGen이 사라진 이유, Metaspace OOM 시나리오 |
+| [05. Runtime Constant Pool](./runtime-data-areas/05-runtime-constant-pool.md) | 클래스 파일 상수풀 vs 런타임 상수풀, 문자열 리터럴의 위치 |
+| [06. Object Layout In Memory](./runtime-data-areas/06-object-layout-in-memory.md) | Object Header + Instance Data + Padding, JOL로 실측 |
+| [07. Off-Heap & Direct Memory](./runtime-data-areas/07-off-heap-direct-memory.md) | ByteBuffer, `sun.misc.Unsafe`, GC가 닿지 않는 메모리 |
 
 </details>
 
@@ -115,13 +115,13 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [Class File Format](./bytecode/class-file-format.md) | `.class` 파일 바이너리 구조, magic number부터 attributes까지 |
-| [Bytecode Instruction Set](./bytecode/bytecode-instruction-set.md) | 200+ 명령어 카테고리 분류, 타입별 명령어 분리 이유 |
-| [Operand Stack Mechanism](./bytecode/operand-stack-mechanism.md) | 스택 기반 VM vs 레지스터 기반 VM, 명령어가 스택에 하는 일 |
-| [Method Invocation Instructions](./bytecode/method-invocation-instructions.md) | `invokevirtual` / `invokeinterface` / `invokespecial` / `invokestatic` 차이 |
-| [Exception Handling Bytecode](./bytecode/exception-handling-bytecode.md) | try-catch-finally가 bytecode에서 Exception Table로 변환되는 방식 |
-| [Lambda & InvokeDynamic](./bytecode/lambda-and-invokedynamic.md) | Lambda가 내부 클래스가 아닌 이유, `LambdaMetafactory` 동작 원리 |
-| [Bytecode Manipulation (ASM)](./bytecode/bytecode-manipulation-asm.md) | ASM으로 런타임에 바이트코드 조작, AOP 구현 원리 |
+| [01. Class File Format](./bytecode/01-class-file-format.md) | `.class` 파일 바이너리 구조, magic number부터 attributes까지 |
+| [02. Bytecode Instruction Set](./bytecode/02-bytecode-instruction-set.md) | 200+ 명령어 카테고리 분류, 타입별 명령어 분리 이유 |
+| [03. Operand Stack Mechanism](./bytecode/03-operand-stack-mechanism.md) | 스택 기반 VM vs 레지스터 기반 VM, 명령어가 스택에 하는 일 |
+| [04. Method Invocation Instructions](./bytecode/04-method-invocation-instructions.md) | `invokevirtual` / `invokeinterface` / `invokespecial` / `invokestatic` 차이 |
+| [05. Exception Handling Bytecode](./bytecode/05-exception-handling-bytecode.md) | try-catch-finally가 bytecode에서 Exception Table로 변환되는 방식 |
+| [06. Lambda & InvokeDynamic](./bytecode/06-lambda-and-invokedynamic.md) | Lambda가 내부 클래스가 아닌 이유, `LambdaMetafactory` 동작 원리 |
+| [07. Bytecode Manipulation (ASM)](./bytecode/07-bytecode-manipulation-asm.md) | ASM으로 런타임에 바이트코드 조작, AOP 구현 원리 |
 
 </details>
 
@@ -138,13 +138,13 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [Interpreter Mechanism](./execution-engine/interpreter-mechanism.md) | Template Interpreter 구조, bytecode → 기계어 디스패치 테이블 |
-| [JIT Compilation Basics](./execution-engine/jit-compilation-basics.md) | Warm-up 임계값, 컴파일 대상 선정 기준 (`-XX:+PrintCompilation`) |
-| [Tiered Compilation](./execution-engine/tiered-compilation.md) | Level 0~4 전환 조건, C1 / C2 컴파일러 역할 분리 |
-| [JIT Optimizations](./execution-engine/jit-optimizations.md) | Inlining, Escape Analysis, Loop Unrolling, Dead Code Elimination |
-| [On-Stack Replacement (OSR)](./execution-engine/on-stack-replacement.md) | 이미 실행 중인 메서드를 JIT 버전으로 교체하는 메커니즘 |
-| [Deoptimization](./execution-engine/deoptimization.md) | Speculative Optimization 실패 시 Interpreter로 복귀하는 과정 |
-| [JVM Intrinsics](./execution-engine/intrinsics.md) | JVM이 특정 메서드를 CPU 명령어로 직접 대체하는 방식 |
+| [01. Interpreter Mechanism](./execution-engine/01-interpreter-mechanism.md) | Template Interpreter 구조, bytecode → 기계어 디스패치 테이블 |
+| [02. JIT Compilation Basics](./execution-engine/02-jit-compilation-basics.md) | Warm-up 임계값, 컴파일 대상 선정 기준 (`-XX:+PrintCompilation`) |
+| [03. Tiered Compilation](./execution-engine/03-tiered-compilation.md) | Level 0~4 전환 조건, C1 / C2 컴파일러 역할 분리 |
+| [04. JIT Optimizations](./execution-engine/04-jit-optimizations.md) | Inlining, Escape Analysis, Loop Unrolling, Dead Code Elimination |
+| [05. On-Stack Replacement (OSR)](./execution-engine/05-on-stack-replacement.md) | 이미 실행 중인 메서드를 JIT 버전으로 교체하는 메커니즘 |
+| [06. Deoptimization](./execution-engine/06-deoptimization.md) | Speculative Optimization 실패 시 Interpreter로 복귀하는 과정 |
+| [07. JVM Intrinsics](./execution-engine/07-intrinsics.md) | JVM이 특정 메서드를 CPU 명령어로 직접 대체하는 방식 |
 
 </details>
 
@@ -161,17 +161,17 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [GC Roots & Reachability](./garbage-collection/gc-roots-and-reachability.md) | GC Root 종류, 순환 참조가 왜 문제가 안 되는가 |
-| [Reference Types](./garbage-collection/reference-types.md) | Strong / Soft / Weak / Phantom Reference별 GC 동작, `WeakHashMap` |
-| [Mark-Sweep-Compact](./garbage-collection/mark-sweep-compact.md) | 3단계 알고리즘, Fragmentation 문제와 Compaction 비용 |
-| [Generational Hypothesis](./garbage-collection/generational-hypothesis.md) | "대부분의 객체는 젊어서 죽는다"는 가설이 GC 설계에 미친 영향 |
-| [Serial & Parallel GC](./garbage-collection/serial-parallel-gc.md) | 단순 GC 동작 원리, Stop-The-World 비용 |
-| [CMS GC & Problems](./garbage-collection/cms-gc-and-problems.md) | Concurrent Mark의 혁신과 Concurrent Mode Failure 한계, G1 탄생 배경 |
-| [G1 GC Deep Dive](./garbage-collection/g1-gc-deep-dive.md) | Region 기반 구조, Concurrent Marking → Evacuation, Pause Prediction Model |
-| [ZGC Deep Dive](./garbage-collection/zgc-deep-dive.md) | Colored Pointer, Load Barrier, Concurrent Relocation — pause < 1ms 원리 |
-| [Shenandoah GC](./garbage-collection/shenandoah-gc.md) | Brooks Pointer, ZGC와의 설계 철학 차이 |
-| [GC Tuning Flags](./garbage-collection/gc-tuning-flags.md) | 실전에서 쓰는 JVM 플래그 완전 정리 |
-| [GC Log Analysis](./garbage-collection/gc-log-analysis.md) | `-Xlog:gc*` 로그 해석, STW 시간 측정, 메모리 누수 탐지 |
+| [01. GC Roots & Reachability](./garbage-collection/01-gc-roots-and-reachability.md) | GC Root 종류, 순환 참조가 왜 문제가 안 되는가 |
+| [02. Reference Types](./garbage-collection/02-reference-types.md) | Strong / Soft / Weak / Phantom Reference별 GC 동작, `WeakHashMap` |
+| [03. Mark-Sweep-Compact](./garbage-collection/03-mark-sweep-compact.md) | 3단계 알고리즘, Fragmentation 문제와 Compaction 비용 |
+| [04. Generational Hypothesis](./garbage-collection/04-generational-hypothesis.md) | "대부분의 객체는 젊어서 죽는다"는 가설이 GC 설계에 미친 영향 |
+| [05. Serial & Parallel GC](./garbage-collection/05-serial-parallel-gc.md) | 단순 GC 동작 원리, Stop-The-World 비용 |
+| [06. CMS GC & Problems](./garbage-collection/06-cms-gc-and-problems.md) | Concurrent Mark의 혁신과 Concurrent Mode Failure 한계, G1 탄생 배경 |
+| [07. G1 GC Deep Dive](./garbage-collection/07-g1-gc-deep-dive.md) | Region 기반 구조, Concurrent Marking → Evacuation, Pause Prediction Model |
+| [08. ZGC Deep Dive](./garbage-collection/08-zgc-deep-dive.md) | Colored Pointer, Load Barrier, Concurrent Relocation — pause < 1ms 원리 |
+| [09. Shenandoah GC](./garbage-collection/09-shenandoah-gc.md) | Brooks Pointer, ZGC와의 설계 철학 차이 |
+| [10. GC Tuning Flags](./garbage-collection/10-gc-tuning-flags.md) | 실전에서 쓰는 JVM 플래그 완전 정리 |
+| [11. GC Log Analysis](./garbage-collection/11-gc-log-analysis.md) | `-Xlog:gc*` 로그 해석, STW 시간 측정, 메모리 누수 탐지 |
 
 </details>
 
@@ -188,13 +188,13 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [CPU Cache & Visibility Problem](./java-memory-model/cpu-cache-and-visibility-problem.md) | 캐시 계층 구조, 명령어 재정렬, JMM이 이 모든 것을 추상화하는 이유 |
-| [Happens-Before](./java-memory-model/happens-before.md) | HB 규칙 8가지, "실행 순서"와 "가시성 보장 순서"가 다른 이유 |
-| [Volatile Deep Dive](./java-memory-model/volatile-deep-dive.md) | volatile이 보장하는 것(가시성 + 재정렬 금지)과 보장 안 하는 것(원자성) |
-| [Final Field Semantics](./java-memory-model/final-field-semantics.md) | 생성자 완료 후 final 필드가 보장되는 범위, 안전한 불변 객체 공개 |
-| [Publication & Escape](./java-memory-model/publication-and-escape.md) | 객체가 "탈출"하는 경우, 안전한 공개(Safe Publication) 패턴 |
-| [Synchronized Internals](./java-memory-model/synchronized-internals.md) | synchronized가 삽입하는 Memory Barrier, 모니터 락의 메모리 의미론 |
-| [Memory Barriers](./java-memory-model/memory-barriers.md) | LoadLoad / StoreStore / LoadStore / StoreLoad 배리어와 CPU 명령어 |
+| [01. CPU Cache & Visibility Problem](./java-memory-model/01-cpu-cache-and-visibility-problem.md) | 캐시 계층 구조, 명령어 재정렬, JMM이 이 모든 것을 추상화하는 이유 |
+| [02. Happens-Before](./java-memory-model/02-happens-before.md) | HB 규칙 8가지, "실행 순서"와 "가시성 보장 순서"가 다른 이유 |
+| [03. Volatile Deep Dive](./java-memory-model/03-volatile-deep-dive.md) | volatile이 보장하는 것(가시성 + 재정렬 금지)과 보장 안 하는 것(원자성) |
+| [04. Final Field Semantics](./java-memory-model/04-final-field-semantics.md) | 생성자 완료 후 final 필드가 보장되는 범위, 안전한 불변 객체 공개 |
+| [05. Publication & Escape](./java-memory-model/05-publication-and-escape.md) | 객체가 "탈출"하는 경우, 안전한 공개(Safe Publication) 패턴 |
+| [06. Synchronized Internals](./java-memory-model/06-synchronized-internals.md) | synchronized가 삽입하는 Memory Barrier, 모니터 락의 메모리 의미론 |
+| [07. Memory Barriers](./java-memory-model/07-memory-barriers.md) | LoadLoad / StoreStore / LoadStore / StoreLoad 배리어와 CPU 명령어 |
 
 </details>
 
@@ -211,15 +211,15 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [Object Monitor](./concurrency-internals/object-monitor.md) | Monitor 구조, Entry Set / Wait Set, `wait()` / `notify()` 내부 동작 |
-| [Lock: Biased → Thin → Fat](./concurrency-internals/lock-biased-thin-fat.md) | Mark Word 변화로 보는 Lock 상태 전이, Biased Lock deprecated 이유 |
-| [CAS & Atomic Operations](./concurrency-internals/cas-and-atomic-operations.md) | CPU의 `CMPXCHG` 명령어, ABA 문제, AtomicInteger 내부 구현 |
-| [False Sharing & Cache Line](./concurrency-internals/false-sharing-and-cache-line.md) | 64바이트 캐시라인, `@Contended`, JMH로 False Sharing 실측 |
-| [AQS Internals](./concurrency-internals/aqs-internals.md) | CLH Queue, `ReentrantLock` / `Semaphore` / `CountDownLatch` 공통 기반 |
-| [Thread States & Scheduler](./concurrency-internals/thread-states-and-scheduler.md) | OS 스레드 상태 vs JVM 스레드 상태, Context Switching 비용 |
-| [ThreadLocal Internals](./concurrency-internals/thread-local-internals.md) | `ThreadLocalMap` 내부 구조, 메모리 누수 발생 조건 |
-| [Virtual Threads (Project Loom)](./concurrency-internals/virtual-threads-loom.md) | Carrier Thread, Structured Concurrency, pinning 주의사항 |
-| [Safepoint Mechanism](./concurrency-internals/safepoint-mechanism.md) | Safepoint가 필요한 이유, Time-To-Safepoint 지연 원인과 분석 |
+| [01. Object Monitor](./concurrency-internals/01-object-monitor.md) | Monitor 구조, Entry Set / Wait Set, `wait()` / `notify()` 내부 동작 |
+| [02. Lock: Biased → Thin → Fat](./concurrency-internals/02-lock-biased-thin-fat.md) | Mark Word 변화로 보는 Lock 상태 전이, Biased Lock deprecated 이유 |
+| [03. CAS & Atomic Operations](./concurrency-internals/03-cas-and-atomic-operations.md) | CPU의 `CMPXCHG` 명령어, ABA 문제, AtomicInteger 내부 구현 |
+| [04. False Sharing & Cache Line](./concurrency-internals/04-false-sharing-and-cache-line.md) | 64바이트 캐시라인, `@Contended`, JMH로 False Sharing 실측 |
+| [05. AQS Internals](./concurrency-internals/05-aqs-internals.md) | CLH Queue, `ReentrantLock` / `Semaphore` / `CountDownLatch` 공통 기반 |
+| [06. Thread States & Scheduler](./concurrency-internals/06-thread-states-and-scheduler.md) | OS 스레드 상태 vs JVM 스레드 상태, Context Switching 비용 |
+| [07. ThreadLocal Internals](./concurrency-internals/07-thread-local-internals.md) | `ThreadLocalMap` 내부 구조, 메모리 누수 발생 조건 |
+| [08. Virtual Threads (Project Loom)](./concurrency-internals/08-virtual-threads-loom.md) | Carrier Thread, Structured Concurrency, pinning 주의사항 |
+| [09. Safepoint Mechanism](./concurrency-internals/09-safepoint-mechanism.md) | Safepoint가 필요한 이유, Time-To-Safepoint 지연 원인과 분석 |
 
 </details>
 
@@ -236,13 +236,13 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [JVM Flags Complete Guide](./performance-tuning/jvm-flags-complete-guide.md) | 실전에서 쓰는 플래그 전체 정리 (`-Xms`, `-Xmx`, `-XX:*`) |
-| [Heap Sizing Strategy](./performance-tuning/heap-sizing-strategy.md) | Initial / Max Heap 비율, Young/Old 비율, 컨테이너 환경 주의사항 |
-| [GC Ergonomics](./performance-tuning/gc-ergonomics.md) | JVM이 스스로 GC와 힙 크기를 조정하는 자동 튜닝 원리 |
-| [Profiling with JFR](./performance-tuning/profiling-with-jfr.md) | Java Flight Recorder + JDK Mission Control, Flame Graph 읽기 |
-| [Profiling with async-profiler](./performance-tuning/profiling-with-async-profiler.md) | CPU / 메모리 / 락 프로파일링, `alloc` 모드로 GC 압박 찾기 |
-| [Memory Leak Analysis](./performance-tuning/memory-leak-analysis.md) | Heap Dump 분석, 누수 패턴 (static, ThreadLocal, ClassLoader) |
-| [Benchmarking with JMH](./performance-tuning/benchmarking-with-jmh.md) | 왜 `System.nanoTime()`은 부정확한가, Warm-up / Blackhole / @State |
+| [01. JVM Flags Complete Guide](./performance-tuning/01-jvm-flags-complete-guide.md) | 실전에서 쓰는 플래그 전체 정리 (`-Xms`, `-Xmx`, `-XX:*`) |
+| [02. Heap Sizing Strategy](./performance-tuning/02-heap-sizing-strategy.md) | Initial / Max Heap 비율, Young/Old 비율, 컨테이너 환경 주의사항 |
+| [03. GC Ergonomics](./performance-tuning/03-gc-ergonomics.md) | JVM이 스스로 GC와 힙 크기를 조정하는 자동 튜닝 원리 |
+| [04. Profiling with JFR](./performance-tuning/04-profiling-with-jfr.md) | Java Flight Recorder + JDK Mission Control, Flame Graph 읽기 |
+| [05. Profiling with async-profiler](./performance-tuning/05-profiling-with-async-profiler.md) | CPU / 메모리 / 락 프로파일링, `alloc` 모드로 GC 압박 찾기 |
+| [06. Memory Leak Analysis](./performance-tuning/06-memory-leak-analysis.md) | Heap Dump 분석, 누수 패턴 (static, ThreadLocal, ClassLoader) |
+| [07. Benchmarking with JMH](./performance-tuning/07-benchmarking-with-jmh.md) | 왜 `System.nanoTime()`은 부정확한가, Warm-up / Blackhole / @State |
 
 </details>
 
@@ -259,13 +259,13 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [Object Header & Mark Word](./advanced-internals/object-header-and-mark-word.md) | 64비트 Mark Word 레이아웃, 해시코드 / Lock 상태 / GC 나이 필드 |
-| [Compressed Oops](./advanced-internals/compressed-oops.md) | 64비트 JVM에서 포인터를 32비트로 압축하는 원리, 32GB 힙 제한 이유 |
-| [String Pool & Interning](./advanced-internals/string-pool-interning.md) | 문자열 상수풀 위치 변화 (PermGen → Heap), `intern()` 비용 |
-| [Unsafe API](./advanced-internals/unsafe-api.md) | `sun.misc.Unsafe`로 직접 메모리 조작, JDK 내부 코드가 쓰는 이유 |
-| [Reflection & Performance](./advanced-internals/reflection-and-performance.md) | Reflection 호출 경로, 15회 임계값 후 바이트코드 생성, JIT와의 관계 |
-| [Instrumentation & Java Agent](./advanced-internals/instrumentation-and-agent.md) | `-javaagent` 동작 원리, `ClassFileTransformer`로 클래스 변환 |
-| [JNI Internals](./advanced-internals/jni-internals.md) | JVM ↔ Native 코드 경계, JNI 호출 비용, Global / Local Reference |
+| [01. Object Header & Mark Word](./advanced-internals/01-object-header-and-mark-word.md) | 64비트 Mark Word 레이아웃, 해시코드 / Lock 상태 / GC 나이 필드 |
+| [02. Compressed Oops](./advanced-internals/02-compressed-oops.md) | 64비트 JVM에서 포인터를 32비트로 압축하는 원리, 32GB 힙 제한 이유 |
+| [03. String Pool & Interning](./advanced-internals/03-string-pool-interning.md) | 문자열 상수풀 위치 변화 (PermGen → Heap), `intern()` 비용 |
+| [04. Unsafe API](./advanced-internals/04-unsafe-api.md) | `sun.misc.Unsafe`로 직접 메모리 조작, JDK 내부 코드가 쓰는 이유 |
+| [05. Reflection & Performance](./advanced-internals/05-reflection-and-performance.md) | Reflection 호출 경로, 15회 임계값 후 바이트코드 생성, JIT와의 관계 |
+| [06. Instrumentation & Java Agent](./advanced-internals/06-instrumentation-and-agent.md) | `-javaagent` 동작 원리, `ClassFileTransformer`로 클래스 변환 |
+| [07. JNI Internals](./advanced-internals/07-jni-internals.md) | JVM ↔ Native 코드 경계, JNI 호출 비용, Global / Local Reference |
 
 </details>
 
