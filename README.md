@@ -40,7 +40,7 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 각 챕터의 첫 문서부터 바로 학습을 시작하세요!
 
-[![Class Loading](https://img.shields.io/badge/🔹_Class_Loading-ClassLoader_Hierarchy-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./class-loading/01-classloader-hierarchy)
+[![Class Loading](https://img.shields.io/badge/🔹_Class_Loading-ClassLoader_Hierarchy-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./class-loading/01-classloader-hierarchy.md)
 [![Runtime Data Areas](https://img.shields.io/badge/🔹_Runtime_Data-Heap_Structure-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./runtime-data-areas/heap-structure.md)
 [![Bytecode](https://img.shields.io/badge/🔹_Bytecode-Class_File_Format-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./bytecode/class-file-format.md)
 [![Execution Engine](https://img.shields.io/badge/🔹_Execution_Engine-Interpreter_Mechanism-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./execution-engine/interpreter-mechanism.md)
