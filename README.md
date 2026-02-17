@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🔬 JVM Deep Dive
+# ⚙️ JVM Deep Dive
 
 **"JVM을 블랙박스가 아닌, 완전히 해부된 기계로 이해하기"**
 
@@ -15,7 +15,7 @@
 
 [![GitHub](https://img.shields.io/badge/GitHub-dev--book--lab-181717?style=flat-square&logo=github)](https://github.com/dev-book-lab)
 [![Java](https://img.shields.io/badge/Java-8%2B-orange?style=flat-square&logo=openjdk)](https://www.java.com)
-[![Docs](https://img.shields.io/badge/Docs-57개-blue?style=flat-square&logo=readthedocs&logoColor=white)](./README.md)
+[![Docs](https://img.shields.io/badge/Docs-69개-blue?style=flat-square&logo=readthedocs&logoColor=white)](./README.md)
 [![License](https://img.shields.io/badge/License-MIT-yellow?style=flat-square&logo=opensourceinitiative&logoColor=white)](./LICENSE)
 
 </div>
@@ -25,8 +25,6 @@
 ## 🎯 이 레포에 대하여
 
 JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 에서 멈춥니다.
-
-이 레포는 다릅니다.
 
 | 일반 자료 | 이 레포 |
 |----------|---------|
@@ -38,15 +36,36 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 ---
 
+## 🚀 빠른 시작
+
+각 챕터의 첫 문서부터 바로 학습을 시작하세요!
+
+[![Class Loading](https://img.shields.io/badge/🔹_Class_Loading-ClassLoader_Hierarchy-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./class-loading/classloader-hierarchy.md)
+[![Runtime Data Areas](https://img.shields.io/badge/🔹_Runtime_Data-Heap_Structure-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./runtime-data-areas/heap-structure.md)
+[![Bytecode](https://img.shields.io/badge/🔹_Bytecode-Class_File_Format-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./bytecode/class-file-format.md)
+[![Execution Engine](https://img.shields.io/badge/🔹_Execution_Engine-Interpreter_Mechanism-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./execution-engine/interpreter-mechanism.md)
+[![GC](https://img.shields.io/badge/🔹_Garbage_Collection-GC_Roots_%26_Reachability-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./garbage-collection/gc-roots-and-reachability.md)
+[![JMM](https://img.shields.io/badge/🔹_Java_Memory_Model-CPU_Cache_%26_Visibility-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./java-memory-model/cpu-cache-and-visibility-problem.md)
+[![Concurrency](https://img.shields.io/badge/🔹_Concurrency_Internals-Object_Monitor-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./concurrency-internals/object-monitor.md)
+[![Performance](https://img.shields.io/badge/🔹_Performance_Tuning-JVM_Flags_Guide-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./performance-tuning/jvm-flags-complete-guide.md)
+[![Advanced](https://img.shields.io/badge/🔹_Advanced_Internals-Object_Header_%26_Mark_Word-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./advanced-internals/object-header-and-mark-word.md)
+
+---
+
 ## 📚 전체 학습 지도
 
-> 💡 각 섹션을 클릭하면 상세 문서로 이동합니다
+> 💡 각 섹션을 클릭하면 상세 문서 목록이 펼쳐집니다
 
 <br/>
 
 ### 🔹 클래스 로딩 시스템 (Class Loading)
 
 > **핵심 질문:** `new MyClass()` 를 호출하기 전, JVM은 무엇을 하는가?
+
+<details>
+<summary><b>클래스가 JVM에 올라오는 전체 과정 (7개 문서)</b></summary>
+
+<br/>
 
 | 문서 | 다루는 내용 |
 |------|------------|
@@ -58,11 +77,18 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 | [Custom ClassLoader](./class-loading/custom-classloader.md) | `findClass()` vs `loadClass()`, 암호화된 클래스 런타임 복호화 |
 | [ClassLoader Isolation](./class-loading/classloader-isolation.md) | 같은 클래스명이 두 ClassLoader에서 로드되면 `==` 결과는? |
 
+</details>
+
 <br/>
 
 ### 🔹 런타임 데이터 영역 (Runtime Data Areas)
 
 > **핵심 질문:** 내 객체는 JVM 메모리 어디에, 어떤 모습으로 존재하는가?
+
+<details>
+<summary><b>JVM이 메모리를 나누고 관리하는 방식 (7개 문서)</b></summary>
+
+<br/>
 
 | 문서 | 다루는 내용 |
 |------|------------|
@@ -74,11 +100,18 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 | [Object Layout In Memory](./runtime-data-areas/object-layout-in-memory.md) | Object Header + Instance Data + Padding, JOL로 실측 |
 | [Off-Heap & Direct Memory](./runtime-data-areas/off-heap-direct-memory.md) | ByteBuffer, `sun.misc.Unsafe`, GC가 닿지 않는 메모리 |
 
+</details>
+
 <br/>
 
 ### 🔹 바이트코드 (Bytecode)
 
 > **핵심 질문:** 내가 짠 Java 코드가 JVM의 언어로 어떻게 번역되는가?
+
+<details>
+<summary><b>Java 코드와 JVM 사이의 언어, 바이트코드 완전 분석 (7개 문서)</b></summary>
+
+<br/>
 
 | 문서 | 다루는 내용 |
 |------|------------|
@@ -90,11 +123,18 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 | [Lambda & InvokeDynamic](./bytecode/lambda-and-invokedynamic.md) | Lambda가 내부 클래스가 아닌 이유, `LambdaMetafactory` 동작 원리 |
 | [Bytecode Manipulation (ASM)](./bytecode/bytecode-manipulation-asm.md) | ASM으로 런타임에 바이트코드 조작, AOP 구현 원리 |
 
+</details>
+
 <br/>
 
 ### 🔹 실행 엔진 (Execution Engine)
 
 > **핵심 질문:** JVM은 bytecode를 어떻게 "빠르게" 실행하는가?
+
+<details>
+<summary><b>Interpreter에서 JIT까지, 코드가 실행되는 방식의 진화 (7개 문서)</b></summary>
+
+<br/>
 
 | 문서 | 다루는 내용 |
 |------|------------|
@@ -106,11 +146,18 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 | [Deoptimization](./execution-engine/deoptimization.md) | Speculative Optimization 실패 시 Interpreter로 복귀하는 과정 |
 | [JVM Intrinsics](./execution-engine/intrinsics.md) | JVM이 특정 메서드를 CPU 명령어로 직접 대체하는 방식 |
 
+</details>
+
 <br/>
 
 ### 🔹 가비지 컬렉션 (Garbage Collection)
 
 > **핵심 질문:** JVM은 어떻게 "죽은 객체"를 판단하고, 어떻게 제거하는가?
+
+<details>
+<summary><b>Serial GC부터 ZGC까지, GC 알고리즘의 진화와 원리 (11개 문서)</b></summary>
+
+<br/>
 
 | 문서 | 다루는 내용 |
 |------|------------|
@@ -126,11 +173,18 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 | [GC Tuning Flags](./garbage-collection/gc-tuning-flags.md) | 실전에서 쓰는 JVM 플래그 완전 정리 |
 | [GC Log Analysis](./garbage-collection/gc-log-analysis.md) | `-Xlog:gc*` 로그 해석, STW 시간 측정, 메모리 누수 탐지 |
 
+</details>
+
 <br/>
 
 ### 🔹 자바 메모리 모델 (Java Memory Model)
 
 > **핵심 질문:** 멀티코어 CPU에서 Java 코드는 왜 예상과 다르게 동작하는가?
+
+<details>
+<summary><b>CPU 캐시부터 Happens-Before까지, 동시성의 근본 (7개 문서)</b></summary>
+
+<br/>
 
 | 문서 | 다루는 내용 |
 |------|------------|
@@ -142,11 +196,18 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 | [Synchronized Internals](./java-memory-model/synchronized-internals.md) | synchronized가 삽입하는 Memory Barrier, 모니터 락의 메모리 의미론 |
 | [Memory Barriers](./java-memory-model/memory-barriers.md) | LoadLoad / StoreStore / LoadStore / StoreLoad 배리어와 CPU 명령어 |
 
+</details>
+
 <br/>
 
 ### 🔹 동시성 내부 구조 (Concurrency Internals)
 
 > **핵심 질문:** `synchronized`와 `ReentrantLock`은 내부에서 어떻게 다른가?
+
+<details>
+<summary><b>Lock 메커니즘과 스레드 스케줄링의 실제 구현 (9개 문서)</b></summary>
+
+<br/>
 
 | 문서 | 다루는 내용 |
 |------|------------|
@@ -160,11 +221,18 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 | [Virtual Threads (Project Loom)](./concurrency-internals/virtual-threads-loom.md) | Carrier Thread, Structured Concurrency, pinning 주의사항 |
 | [Safepoint Mechanism](./concurrency-internals/safepoint-mechanism.md) | Safepoint가 필요한 이유, Time-To-Safepoint 지연 원인과 분석 |
 
+</details>
+
 <br/>
 
 ### 🔹 성능 튜닝 (Performance Tuning)
 
 > **핵심 질문:** JVM을 어떻게 측정하고, 어떻게 최적화하는가?
+
+<details>
+<summary><b>JFR, async-profiler, JMH로 JVM을 실측하고 개선하는 방법 (7개 문서)</b></summary>
+
+<br/>
 
 | 문서 | 다루는 내용 |
 |------|------------|
@@ -176,11 +244,18 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 | [Memory Leak Analysis](./performance-tuning/memory-leak-analysis.md) | Heap Dump 분석, 누수 패턴 (static, ThreadLocal, ClassLoader) |
 | [Benchmarking with JMH](./performance-tuning/benchmarking-with-jmh.md) | 왜 `System.nanoTime()`은 부정확한가, Warm-up / Blackhole / @State |
 
+</details>
+
 <br/>
 
 ### 🔹 JVM 내부 심화 (Advanced Internals)
 
 > **핵심 질문:** JVM이 숨기고 있는 더 깊은 층에는 무엇이 있는가?
+
+<details>
+<summary><b>Mark Word, Compressed Oops, Java Agent까지 — JVM의 가장 깊은 곳 (7개 문서)</b></summary>
+
+<br/>
 
 | 문서 | 다루는 내용 |
 |------|------------|
@@ -192,12 +267,14 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 | [Instrumentation & Java Agent](./advanced-internals/instrumentation-and-agent.md) | `-javaagent` 동작 원리, `ClassFileTransformer`로 클래스 변환 |
 | [JNI Internals](./advanced-internals/jni-internals.md) | JVM ↔ Native 코드 경계, JNI 호출 비용, Global / Local Reference |
 
+</details>
+
 ---
 
 ## 🗺️ 목적별 학습 경로
 
 <details>
-<summary><b>🟢 우테코 / 기술 면접 준비 (3~4주)</b></summary>
+<summary><b>🟢 Java 개발을 시작하는 분 / 기술 면접 준비 (3~4주)</b></summary>
 
 <br/>
 
@@ -268,45 +345,15 @@ class-loading 전체
 
 모든 문서는 동일한 구조로 작성됩니다.
 
-```
-## 🎯 핵심 질문
-  이 문서를 읽고 나면 답할 수 있는 질문
-
-## 🔍 왜 이게 존재하는가 (Why)
-  문제 상황과 설계 배경
-
-## 📐 내부 구조 (How)
-  원리 + 다이어그램
-
-## 💻 실험으로 확인하기
-  직접 실행 가능한 코드 + 예상 결과 + 측정 도구
-
-## ⚡ 실무 임팩트
-  이 지식이 실제 코드 작성 / 장애 대응에 어떤 영향을 주는가
-
-## 🚫 흔한 오해
-  잘못 알려진 내용 교정
-
-## 📌 핵심 정리
-  한 화면 요약
-```
-
----
-
-## 📊 전체 문서 현황
-
-| 카테고리 | 문서 수 | 난이도 |
-|---------|---------|--------|
-| 클래스 로딩 | 7 | ⭐⭐⭐ |
-| 런타임 데이터 영역 | 7 | ⭐⭐ |
-| 바이트코드 | 7 | ⭐⭐⭐ |
-| 실행 엔진 | 7 | ⭐⭐⭐⭐ |
-| 가비지 컬렉션 | 11 | ⭐⭐⭐⭐ |
-| 자바 메모리 모델 | 7 | ⭐⭐⭐⭐⭐ |
-| 동시성 내부 구조 | 9 | ⭐⭐⭐⭐⭐ |
-| 성능 튜닝 | 7 | ⭐⭐⭐⭐ |
-| Advanced Internals | 7 | ⭐⭐⭐⭐⭐ |
-| **합계** | **69** | |
+| 섹션 | 설명 |
+|------|------|
+| 🎯 **핵심 질문** | 이 문서를 읽고 나면 답할 수 있는 질문 |
+| 🔍 **왜 이게 존재하는가** | 문제 상황과 설계 배경 |
+| 📐 **내부 구조** | 원리 + 다이어그램 |
+| 💻 **실험으로 확인하기** | 직접 실행 가능한 코드 + 예상 결과 + 측정 도구 |
+| ⚡ **실무 임팩트** | 이 지식이 실제 코드 작성 / 장애 대응에 어떤 영향을 주는가 |
+| 🚫 **흔한 오해** | 잘못 알려진 내용 교정 |
+| 📌 **핵심 정리** | 한 화면 요약 |
 
 ---
 
