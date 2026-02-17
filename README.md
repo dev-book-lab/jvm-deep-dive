@@ -40,7 +40,7 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 각 챕터의 첫 문서부터 바로 학습을 시작하세요!
 
-[![Class Loading](https://img.shields.io/badge/🔹_Class_Loading-ClassLoader_Hierarchy-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./class-loading/classloader-hierarchy.md)
+[![Class Loading](https://img.shields.io/badge/🔹_Class_Loading-ClassLoader_Hierarchy-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./class-loading/01-classloader-hierarchy)
 [![Runtime Data Areas](https://img.shields.io/badge/🔹_Runtime_Data-Heap_Structure-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./runtime-data-areas/heap-structure.md)
 [![Bytecode](https://img.shields.io/badge/🔹_Bytecode-Class_File_Format-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./bytecode/class-file-format.md)
 [![Execution Engine](https://img.shields.io/badge/🔹_Execution_Engine-Interpreter_Mechanism-E76F00?style=for-the-badge&logo=openjdk&logoColor=white)](./execution-engine/interpreter-mechanism.md)
@@ -69,7 +69,7 @@ JVM에 관한 자료는 많습니다. 하지만 대부분은 **"무엇인가"** 
 
 | 문서 | 다루는 내용 |
 |------|------------|
-| [ClassLoader Hierarchy](./class-loading/classloader-hierarchy.md) | Bootstrap / Extension / Application 계층과 Parent Delegation Model |
+| [ClassLoader Hierarchy](./class-loading/01-classloader-hierarchy) | Bootstrap / Extension / Application 계층과 Parent Delegation Model |
 | [Loading → Linking → Initializing](./class-loading/loading-linking-initializing.md) | 3단계 책임 분리, static 초기화 블록이 실행되는 정확한 시점 |
 | [Bytecode Verification](./class-loading/bytecode-verification.md) | JVM이 .class 파일을 어떻게 신뢰하는가, Verifier 동작 원리 |
 | [Symbolic Reference Resolution](./class-loading/symbolic-reference-resolution.md) | ConstantPool의 심볼릭 참조가 직접 참조로 변환되는 과정 |
@@ -354,6 +354,7 @@ class-loading 전체
 | ⚡ **실무 임팩트** | 이 지식이 실제 코드 작성 / 장애 대응에 어떤 영향을 주는가 |
 | 🚫 **흔한 오해** | 잘못 알려진 내용 교정 |
 | 📌 **핵심 정리** | 한 화면 요약 |
+| 🤔 **생각해볼 문제** | 개념을 더 깊이 이해하기 위한 질문 + 해설 |
 
 ---
 
