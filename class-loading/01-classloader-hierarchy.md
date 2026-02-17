@@ -627,6 +627,6 @@ Tomcat 같은 환경과 어떻게 다른가?
 
 <div align="center">
 
-**[⬅️ 목차로 돌아가기](../README.md)** | **[다음: Loading → Linking → Initializing ➡️](./loading-linking-initializing.md)**
+**[⬅️ 목차로 돌아가기](../README.md)** | **[다음: Loading → Linking → Initializing ➡️](./02-loading-linking-initializing.md)**
 
 </div>
