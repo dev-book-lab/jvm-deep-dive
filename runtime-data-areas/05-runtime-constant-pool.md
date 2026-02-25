@@ -72,12 +72,12 @@ JVM은 이를 **Constant Pool**로 해결한다.
 └────────────────────────────────────────┘
         ↓ 클래스 로드 시
 ┌────────────────────────────────────────┐
-│  Runtime Constant Pool (Metaspace)    │
+│  Runtime Constant Pool (Metaspace)     │
 ├────────────────────────────────────────┤
-│  #1 → Object.<init> (직접 참조)       │
-│  #2 → String 인스턴스 "Hello" (Heap)  │
-│  #3 → System.out 필드 (직접 참조)     │
-│  #4 → PrintStream.println (직접 참조) │
+│  #1 → Object.<init> (직접 참조)          │
+│  #2 → String 인스턴스 "Hello" (Heap)     │
+│  #3 → System.out 필드 (직접 참조)         │
+│  #4 → PrintStream.println (직접 참조)    │
 │  ...                                   │
 └────────────────────────────────────────┘
 
@@ -93,21 +93,21 @@ JVM은 이를 **Constant Pool**로 해결한다.
 각 클래스마다 독립적인 Runtime Constant Pool:
 
 ┌──────────────────────────────────────────────┐
-│  MyClass의 Runtime Constant Pool            │
+│  MyClass의 Runtime Constant Pool              │
 ├──────────────────────────────────────────────┤
-│  1. 리터럴 상수                               │
-│     - 숫자: 42, 3.14, true                   │
-│     - 문자열: "Hello", "World"               │
+│  1. 리터럴 상수                                 │
+│     - 숫자: 42, 3.14, true                    │
+│     - 문자열: "Hello", "World"                │
 │                                              │
-│  2. 심볼릭 참조 (Resolution 전)               │
-│     - 클래스/인터페이스: "java/lang/String"  │
-│     - 필드: "System.out:PrintStream"         │
-│     - 메서드: "println:(Ljava/lang/String;)V"│
+│  2. 심볼릭 참조 (Resolution 전)                 │
+│     - 클래스/인터페이스: "java/lang/String"      │
+│     - 필드: "System.out:PrintStream"          │
+│     - 메서드: "println:(Ljava/lang/String;)V" │
 │                                              │
-│  3. 직접 참조 (Resolution 후)                 │
-│     - 메서드 포인터: 0x7f3a2b10              │
-│     - 필드 오프셋: offset 24                 │
-│     - 클래스 메타데이터: Klass* 0x...        │
+│  3. 직접 참조 (Resolution 후)                   │
+│     - 메서드 포인터: 0x7f3a2b10                  │
+│     - 필드 오프셋: offset 24                    │
+│     - 클래스 메타데이터: Klass* 0x...             │
 └──────────────────────────────────────────────┘
 
 접근:
@@ -126,13 +126,13 @@ Java 6 이하: String Pool in PermGen
 ├─────────────────────────────────────┤
 │  String Pool (Interned Strings)     │
 │  ┌───────────────────────────────┐  │
-│  │ "Hello" → String 인스턴스      │  │
-│  │ "World" → String 인스턴스      │  │
-│  │ ...                            │  │
+│  │ "Hello" → String 인스턴스       │  │
+│  │ "World" → String 인스턴스       │  │
+│  │ ...                           │  │
 │  └───────────────────────────────┘  │
 │                                     │
 │  Runtime Constant Pool              │
-│  (각 클래스마다)                     │
+│  (각 클래스마다)                       │
 └─────────────────────────────────────┘
 
 문제:
@@ -146,11 +146,11 @@ Java 7+: String Pool in Heap
 ├─────────────────────────────────────┤
 │  String Pool                        │
 │  ┌───────────────────────────────┐  │
-│  │ "Hello" → String 인스턴스      │  │
-│  │ "World" → String 인스턴스      │  │
+│  │ "Hello" → String 인스턴스       │  │
+│  │ "World" → String 인스턴스       │  │
 │  └───────────────────────────────┘  │
 │                                     │
-│  일반 객체들                         │
+│  일반 객체들                           │
 │  ...                                │
 └─────────────────────────────────────┘
 
@@ -158,7 +158,7 @@ Java 7+: String Pool in Heap
 │          Metaspace                  │
 ├─────────────────────────────────────┤
 │  Runtime Constant Pool              │
-│  (String Pool은 Heap을 참조)         │
+│  (String Pool은 Heap을 참조)          │
 └─────────────────────────────────────┘
 
 장점:

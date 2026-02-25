@@ -84,7 +84,7 @@ Java 8+: Metaspace
 Native Memory (Heap 밖)
 ┌─────────────────────────────────────┐
 │         Metaspace                   │
-│  (동적 확장, 네이티브 메모리)          │
+│  (동적 확장, 네이티브 메모리)             │
 └─────────────────────────────────────┘
 
 Metaspace 장점:
@@ -147,11 +147,11 @@ Metaspace 내부:
 │              Metaspace                      │
 ├───────────────────┬─────────────────────────┤
 │   Class Metadata  │  Compressed Class Space │
-│   (일반 클래스)     │  (압축 포인터 활성화 시)  │
+│   (일반 클래스)      │  (압축 포인터 활성화 시)     │
 │                   │                         │
-│  - Klass 구조체   │  - Klass* 압축 저장     │
-│  - 메서드 정보     │  - 32비트 주소 사용     │
-│  - ConstantPool   │  (-XX:+UseCompressedOops)│
+│  - Klass 구조체     │  - Klass* 압축 저장       │
+│  - 메서드 정보       │  - 32비트 주소 사용        │
+│  - ConstantPool   │ (-XX:+UseCompressedOops)│
 └───────────────────┴─────────────────────────┘
         ↑                       ↑
   동적 확장 가능         최대 1GB (기본)

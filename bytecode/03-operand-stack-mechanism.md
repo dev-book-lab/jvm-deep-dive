@@ -492,11 +492,11 @@ max_stack이 큰 메서드 = 복잡한 표현식
   
   ┌─────────────────┐
   │ main Frame      │
-  │ Operand Stack: []│ ← main의 스택
+  │Operand Stack: []│ ← main의 스택
   └─────────────────┘
   ┌─────────────────┐
   │ foo Frame       │
-  │ Operand Stack: []│ ← foo의 스택 (별도)
+  │Operand Stack: []│ ← foo의 스택 (별도)
   └─────────────────┘
   
   foo() 종료 시:

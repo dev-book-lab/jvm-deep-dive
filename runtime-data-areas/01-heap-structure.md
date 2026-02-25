@@ -221,7 +221,7 @@ G1 힙:
 │  E = Eden Region                                  │
 │  S = Survivor Region                              │
 │  O = Old Region                                   │
-│  H = Humongous Region (큰 객체 전용)              │
+│  H = Humongous Region (큰 객체 전용)                 │
 └───────────────────────────────────────────────────┘
 
 Region 크기:
