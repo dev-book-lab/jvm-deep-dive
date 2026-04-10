@@ -376,6 +376,6 @@ Made with ❤️ by [Dev Book Lab](https://github.com/dev-book-lab)
 
 <br/>
 
-*"Java 코드를 작성하는 것과, Java 코드가 어떻게 살아 움직이는지 아는 것은 다르다"*
+**"Java 코드를 작성하는 것과, Java 코드가 어떻게 살아 움직이는지 아는 것은 다르다"**
 
 </div>
